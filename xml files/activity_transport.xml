@@ -1,0 +1,168 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent">
+
+
+    <ImageView
+        android:id="@+id/image"
+        android:layout_width="98dp"
+        android:layout_height="50dp"
+        android:background="#122080"
+        android:src="@drawable/cars"
+        android:padding="5dp"
+        android:contentDescription="@string/header" />
+
+    <TextView
+        android:id="@+id/transport_text"
+        android:layout_width="198dp"
+        android:layout_height="50dp"
+        android:layout_toRightOf="@+id/image"
+        android:background="#122080"
+        android:gravity="center"
+        android:text="@string/transport"
+        android:textAlignment="center"
+        android:textColor="#fff"
+        android:textSize="28sp"
+        android:layout_toEndOf="@+id/image" />
+
+    <ImageView
+        android:id="@+id/image2"
+        android:layout_width="98dp"
+        android:layout_height="50dp"
+        android:background="#122080"
+        android:padding="5dp"
+        android:layout_toRightOf="@+id/transport_text"
+        android:src="@drawable/cars"
+        android:layout_toEndOf="@+id/transport_text"
+        android:contentDescription="@string/header" />
+
+    <TextView
+        android:id="@+id/date_selected"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_below="@id/image"
+        android:text="Today's date: "
+        android:textSize="24sp"
+        android:textColor="#000080"
+        android:layout_marginTop="15dp"
+        android:layout_marginStart="10dp"
+        android:layout_marginLeft="10dp"
+        />
+
+    <TextView
+        android:id="@+id/date_textView"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="10dp"
+        android:layout_marginLeft="10dp"
+        android:layout_marginTop="15dp"
+        android:textColor="#122080"
+        android:textSize="24sp"
+        android:layout_below="@+id/image"
+        android:layout_toRightOf="@id/date_selected"
+        />
+
+
+    <CalendarView
+        android:id="@+id/cal"
+        android:layout_width="wrap_content"
+        android:layout_height="306dp"
+        android:layout_below="@+id/date_textView"
+        android:layout_marginStart="40dp"
+        android:layout_marginLeft="40dp"
+        android:layout_marginTop="10dp"
+        android:background="@drawable/calendar_shape" />
+
+
+    <TextView
+        android:id="@+id/currency_textView"
+        android:layout_width="104dp"
+        android:layout_height="wrap_content"
+        android:layout_below="@+id/cal"
+        android:layout_marginStart="10dp"
+        android:layout_marginLeft="10dp"
+        android:layout_marginTop="20dp"
+        android:text="@string/currency"
+        android:textColor="#000080"
+        android:textSize="24sp" />
+
+    <TextView
+        android:id="@+id/pound_textView"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_toRightOf="@id/currency_textView"
+        android:layout_below="@+id/cal"
+        android:layout_marginLeft="30dp"
+        android:text="@string/pound_sterling"
+        android:layout_marginTop="25dp"
+        android:textSize="24sp"
+        android:layout_toEndOf="@id/currency_textView"
+        android:layout_marginStart="30dp" />
+
+
+
+    <TextView
+        android:id="@+id/amount_textView"
+        android:layout_width="match_parent"
+        android:layout_height="30dp"
+        android:layout_marginStart="10dp"
+        android:layout_marginLeft="10dp"
+        android:layout_marginTop="15dp"
+        android:text="@string/amount"
+        android:textColor="#000080"
+        android:textSize="24sp"
+        android:layout_below="@+id/currency_textView"
+        />
+
+
+
+    <EditText
+        android:id="@+id/et_amount"
+        android:layout_width="340dp"
+        android:layout_height="40dp"
+        android:hint="@string/input_amount"
+        android:textAlignment="center"
+        android:inputType="numberDecimal"
+        android:textSize="20sp"
+        android:layout_below="@+id/amount_textView"
+        android:background="@drawable/calendar_shape"
+        android:layout_marginLeft="40dp"
+        android:layout_marginStart="40dp"
+        android:gravity="center_horizontal"
+        android:layout_marginTop="10dp"
+        android:autofillHints="" />
+
+
+    <Button
+        android:id="@+id/add_btn"
+        android:layout_width="wrap_content"
+        android:layout_height="42dp"
+        android:layout_below="@+id/et_amount"
+        android:layout_gravity="end"
+        android:layout_marginTop="40dp"
+        android:layout_marginLeft="290dp"
+        android:text="@string/submit"
+        android:textAllCaps="false"
+        android:textColor="#000080"
+        app:backgroundTint="#89CFF0"
+        android:layout_marginStart="290dp" />
+
+    <TextView
+        android:id="@+id/view_Expenses"
+        android:layout_width="match_parent"
+        android:layout_height="40dp"
+        android:layout_below="@+id/add_btn"
+        android:layout_marginTop="35dp"
+        android:background="#89CFF0"
+        android:gravity="center"
+        android:text="@string/view_expenses"
+        android:textColor="#000080"
+        android:textSize="22sp" />
+
+
+
+
+</RelativeLayout>
